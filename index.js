@@ -1,5 +1,5 @@
 
-const contenedor = document.querySelector('main#contenedor.contenedor')
+const contenedor = document.querySelector('#contenedor')
 const buscar= document.querySelector('#inputSearch')
 
 
@@ -25,7 +25,7 @@ function tocarBotones(){
     botones.forEach((boton)=>{
         boton.addEventListener('click', ()=> {
         let producto= arrayProductos.find((prod)=> prod.codigo ==boton.id)
-        carritodeCompras.push(caja)
+        carritodeCompras.push(producto)
         localStorage.setItem('carritodeCompras', JSON.stringify(carritodeCompras))
         console.log(producto)
         })
