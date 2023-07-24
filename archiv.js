@@ -6,7 +6,8 @@ function casiterminadoCarrito (things){
     <td>${things.imagen}</td>
     <td>${things.nombre}</td>
     <td>${things.precio}</td>
-    <td><i id="carLogo" class="fa-solid fa-cart-plus"></i></td>
+    <td>${things.codigo}</td>
+    <td><i id="❌"></i></td>
 </tr>`
 }
 

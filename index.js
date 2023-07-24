@@ -24,7 +24,9 @@ function tocarBotones(){
     const botones = document.querySelectorAll('button.buton-online')
     botones.forEach((boton)=>{
         boton.addEventListener('click', ()=> {
-        let producto= arrayProductos.find((prod)=> prod.nombre === parseInt(boton.nombre))
+        let producto= arrayProductos.find((prod)=> prod.codigo ==boton.id)
+        carritodeCompras.push(caja)
+        localStorage.setItem('carritodeCompras', JSON.stringify(carritodeCompras))
         console.log(producto)
         })
     })
@@ -43,6 +45,7 @@ function subimosCajas (array) {
 subimosCajas(arrayProductos)
 
 buscar.addEventListener('search', ()=> {
+    localStorage.setItem("ultima busqueda", buscar.value)
 if (buscar.value.trim() !== ""){
     let arrayResultante= arrayProductos.filter((caja)=> caja.nombre.toLowerCase().includes(buscar.value.trim().toLowerCase()))
     subimosCajas(arrayResultante)

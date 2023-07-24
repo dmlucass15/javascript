@@ -5,7 +5,6 @@
 }
 body{
     background-color: olivedrab;
-    padding-top: 80px;
 }
 
 .navegacion{
@@ -22,16 +21,19 @@ body{
 
 }
 
-
+.contenedor{
+    display: flex;
+    flex-wrap: wrap;
+}
 .cajas{
 display: flex;
 flex-direction: column;
 justify-content:center;
-width:300px;
+width:370px;
 border: 1px solid lightgray;
 box-shadow: 2px 2px 8px 4px #d3d3d3d1;
 border-radius:15px;
-}
+} 
 
 .nombre{
 font-size: 24px;
@@ -47,7 +49,8 @@ background-color: olive;
 }
 
 .imagen{
-    width: 20px
+    width: 30px;
+    height: 30px;
 }
 
 .buton-online{
