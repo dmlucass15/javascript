@@ -12,7 +12,7 @@ const contenedor = document.querySelector('#contenedor')
 const buscar= document.querySelector('#inputSearch')
 
 
-const carritodeCompras = JSON.parse(localStorage.getItem('carritodeCompras'))
+let carritodeCompras = JSON.parse(localStorage.getItem('carritodeCompras')) 
 
 
 
@@ -29,17 +29,23 @@ return `<div class="cajas" id="cajas">
             location.href = 'otro.html'
     })
 
-function tocarBotones(){
-    const botones = document.querySelectorAll('button.buton-online')
-    botones.forEach((boton)=>{
-        boton.addEventListener('click', ()=> {
-        let producto= arrayProductos.find((prod)=> prod.codigo ==boton.id)
-        carritodeCompras.push(producto)
-        localStorage.setItem('carritodeCompras', JSON.stringify(carritodeCompras))
-        console.log(carritodeCompras)
-        })
-    })
-}
+    function tocarBotones() {
+        const botones = document.querySelectorAll('button.buton-online');
+        botones.forEach((boton) => {
+            boton.addEventListener('click', () => {
+                let producto = arrayProductos.find((prod) => prod.codigo == boton.id);
+    
+                // Verificar si carritodeCompras es null
+                if (carritodeCompras === null) {
+                    carritodeCompras = [];
+                }
+    
+                carritodeCompras.push(producto);
+                localStorage.setItem('carritodeCompras', JSON.stringify(carritodeCompras));
+                console.log(carritodeCompras);
+    });
+    });
+    }
 
 
 function subimosCajas (array) { 
