@@ -4,20 +4,25 @@
     box-sizing: border-box;
 }
 body{
-    background-color: olivedrab;
+    background-color: rgb(4, 1, 23);
 }
 
 .navegacion{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: olivedrab;
+    background-color: rgb(4, 1, 23);
     padding: 10px;
+}
+
+.logo{
+    color: aliceblue;
 }
 
 .carrito{
     display: inline-block;
     font-size: 40px;
+    color: white;
 
 }
 
@@ -39,11 +44,11 @@ border-radius:15px;
 font-size: 24px;
 text-align: center;
 padding: 10px 10px 0 10px;;
-background-color: olive;
+background-color: wheat;
 }
 
 .precio{
-    background-color: olive;
+    background-color: wheat;
     font-size: 20px;
     text-align: center;
 }
@@ -77,3 +82,7 @@ text-align:center;
     margin-top: 5px;
 }
 
+
+.boton-quitar{
+    cursor: pointer;
+}

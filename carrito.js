@@ -10,8 +10,8 @@ function casiterminadoCarrito (things){
     <td> <img src="${things.imagen}"></td>
     <td>${things.nombre}</td>
     <td>${things.precio}</td>
-    <td>${things.codigo}</td>
-    <td><i id="❌"></i></td>
+    <td id="" class="boton-quitar">❌</td>
+    
 </tr>`
 }
 
