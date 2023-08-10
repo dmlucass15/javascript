@@ -17,10 +17,10 @@
     
         <nav>
             <ul class="menu">
-                <li><button class="boton-menu boton-categoria-active"> <i class="fa-solid fa-arrow-right"></i>Todos Los Productos</button></li>
-                <li><button class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Planes</button></li>
-                <li><button class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Proteinas</button></li>
-                <li><button class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Creatinas</button></li>  
+                <li><button id="todos" class="boton-menu boton-categoria-active"> <i class="fa-solid fa-arrow-right"></i>Todos Los Productos</button></li>
+                <li><button id="planes" class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Planes</button></li>
+                <li><button id="proteinas" class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Proteinas</button></li>
+                <li><button id="creatinas" class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Creatinas</button></li>  
                 <li><button><a class="boton-menu boton-carrito" href="carrito.html"> <i class="fa-solid fa-bag-shopping"></i>  Carrito <span class="numerito">0</span></a> </button></li>
             </ul>
         </nav>
@@ -29,88 +29,9 @@
         </footer>
     </aside>
     <main>
-        <h2 class="titulo-principal">Todos los productos</h2>
-        <div class="contenedor-productos">
-            <div class="producto">
-                <img class="producto-imagen" src="img/crea1.webp" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Creatina CreaStack </h3>
-                    <p class="producto-precio">$20.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/crea2.webp" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Creatine Monohidrate 3000</h3>
-                    <p class="producto-precio">$18.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/crea3.webp" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Creatine Iron Nutrition</h3>
-                    <p class="producto-precio">$15.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/prote1.webp" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Proteina NitroTech</h3>
-                    <p class="producto-precio">$35.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/prote2.png" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Proteina Bipro</h3>
-                    <p class="producto-precio">$27.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/prote3.jpeg" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Proteina Iso100</h3>
-                    <p class="producto-precio">$33.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/plan1.avif" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Plan Gym</h3>
-                    <p class="producto-precio">$8.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/plan2.jpg" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Plan Alimentacion</h3>
-                    <p class="producto-precio">$8.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
-
-            <div class="producto">
-                <img class="producto-imagen" src="img/plan3.webp" alt="">
-                <div class="producto-detalles">
-                    <h3 class="producto-titulo">Plan Gym + Alimentacion </h3>
-                    <p class="producto-precio">$12.000</p>
-                    <button class="producto-agregar">Agregar</button>
-                </div>
-            </div>
+        <h2 id="titulo-principal" class="titulo-principal">Todos los productos</h2>
+        <div id="contenedor-productos" class="contenedor-productos">
+        <!--se rellena con JS-->
         </div>
     </main>
 </div>
