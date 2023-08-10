@@ -2,37 +2,120 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="estilos.css">
-    <script defer src="index.js"></script>
-    <title>PlanesFit</title>
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-<div class="navegacion">
-      <h1 class="logo"> 🏋️‍♂️Tienda Fit🏋️</h1>
-
-    <nav>
-      <ul>
-        <li id="carrito" class="carrito "><i id="carLogo" class="fa-solid fa-cart-plus"></i></li>
-      </ul>
-    </nav>
-  </div>
-
-<hr>
-<input type="search" id="inputSearch" class="inputSearch" placeholder="📌Busca Tu Producto...">
-<hr>
-
-<main id="contenedor" class="contenedor ">
-  <div class="cajas" id="cajas">
-     <img src="img/muñeca">
-     <h3 class="nombre"> Muñequera  </h3>
-    <p class="precio"> $5.000  </p>   
-   <button class="buton-online" id="boton" > Añadir al carrito </div>
-</main>
+<div class="wrapper">
+    <aside>
+        <header>
+            <h1 class="logo">LucasFit</h1>
+        </header>
     
+        <nav>
+            <ul class="menu">
+                <li><button class="boton-menu boton-categoria-active"> <i class="fa-solid fa-arrow-right"></i>Todos Los Productos</button></li>
+                <li><button class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Planes</button></li>
+                <li><button class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Proteinas</button></li>
+                <li><button class="boton-menu boton-categoria"> <i class="fa-solid fa-arrow-right"></i>Creatinas</button></li>  
+                <li><button><a class="boton-menu boton-carrito" href="carrito.html"> <i class="fa-solid fa-bag-shopping"></i>  Carrito <span class="numerito">0</span></a> </button></li>
+            </ul>
+        </nav>
+        <footer>
+            <p class="texto-footer">© 2023 Lucas Fitness</p>
+        </footer>
+    </aside>
+    <main>
+        <h2 class="titulo-principal">Todos los productos</h2>
+        <div class="contenedor-productos">
+            <div class="producto">
+                <img class="producto-imagen" src="img/crea1.webp" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Creatina CreaStack </h3>
+                    <p class="producto-precio">$20.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
 
+            <div class="producto">
+                <img class="producto-imagen" src="img/crea2.webp" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Creatine Monohidrate 3000</h3>
+                    <p class="producto-precio">$18.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/crea3.webp" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Creatine Iron Nutrition</h3>
+                    <p class="producto-precio">$15.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/prote1.webp" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Proteina NitroTech</h3>
+                    <p class="producto-precio">$35.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/prote2.png" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Proteina Bipro</h3>
+                    <p class="producto-precio">$27.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/prote3.jpeg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Proteina Iso100</h3>
+                    <p class="producto-precio">$33.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/plan1.avif" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Plan Gym</h3>
+                    <p class="producto-precio">$8.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/plan2.jpg" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Plan Alimentacion</h3>
+                    <p class="producto-precio">$8.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+
+            <div class="producto">
+                <img class="producto-imagen" src="img/plan3.webp" alt="">
+                <div class="producto-detalles">
+                    <h3 class="producto-titulo">Plan Gym + Alimentacion </h3>
+                    <p class="producto-precio">$12.000</p>
+                    <button class="producto-agregar">Agregar</button>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+
+
+<script src="index.js"></script>
 </body>
 </html>

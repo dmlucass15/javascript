@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <aside>
+            <header>
+                <h1 class="logo">LucasFit</h1>
+            </header>
+        
+            <nav>
+                <ul> 
+                    <li><button><a class="boton-menu boton-volver" href="index.html"><i class="fa-solid fa-house"></i>Seguir Comprando</a> </button></li>
+                    <li><button><a class="boton-menu boton-carrito-active" href="carrito.html"> <i class="fa-solid fa-bag-shopping"></i>Carrito</a> </button></li>
+                </ul>
+            </nav>
+            <footer>
+                <p class="footer">© 2023 Lucas Fitness</p>
+            </footer>
+        </aside>
+        <main>
+            <h2 class="titulo-principal">Carrito</h2>
+            <div class="contenedor-carrito">
+                <p class="carrito-vacio">Tu carrito esta vacio. 😥</p>
+
+                <div class="carrito-productos disabled">
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="img/crea1.webp" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Titulo</small>
+                            <h3>Creatina CreaStack</h3>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                        <small>Cantidad</small>
+                        <p>1</p>
+                    </div>
+                    <div class="carrito-producto-precio">
+                        <small>Precio</small>
+                        <p>$20.000</p>
+                    </div>
+                    <div class="carrito-producto-subtotal">
+                        <small>Subtotal</small>
+                        <p>$20.000</p>
+                    </div>
+                    <button class="carrito-producto-eliminar"> <i class="fa-solid fa-trash"></i></button>
+                </div>
+
+                <div class="carrito-productos disabled">
+                    <div class="carrito-producto">
+                        <img class="carrito-producto-imagen" src="img/crea2.webp" alt="">
+                        <div class="carrito-producto-titulo">
+                            <small>Titulo</small>
+                            <h3>Creatine Monohidrate 3000</h3>
+                        </div>
+                        <div class="carrito-producto-cantidad">
+                        <small>Cantidad</small>
+                        <p>2</p>
+                    </div>
+                    <div class="carrito-producto-precio">
+                        <small>Precio</small>
+                        <p>$18.000</p>
+                    </div>
+                    <div class="carrito-producto-subtotal">
+                        <small>Subtotal</small>
+                        <p>$36.000</p>
+                    </div>
+                    <button class="carrito-producto-eliminar"> <i class="fa-solid fa-trash"></i></button>
+                </div>
+                
+                <div class="carrito-acciones disabled">
+                    <div class="carrito-acciones-izquierda">
+                    <button class="carrito-acciones-vaciar">Vaciar Carrito</button>
+                    </div>
+
+                    <div class="carrito-acciones-derecha">
+                        <div class="carrito-acciones-total">
+                            <p>Total:</p>
+                            <p id="total">$56.000</p>
+                        </div>
+                        <button class="carrito-acciones-comprar">Comprar Ahora</button>
+                    </div>
+                </div>
+                <p class="carrito-comprado disabled">Muchas Gracias por tu compra. 😁</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="carrito.js"></script>
+</body>
+</html>
