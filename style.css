@@ -201,7 +201,7 @@ main{
     background-color: var(--clr-gray);
     color: var(--clr-main);
     padding: .5rem;
-    padding-right: 1.5rem;
+    padding-right: 2rem;
     border-radius: 1rem;
 }
 
@@ -270,7 +270,7 @@ main{
 
 .disabled{
     display: none;
-}
+} 
 
 /*.inputSearch{
     display: flex;
