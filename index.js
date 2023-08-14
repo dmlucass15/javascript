@@ -1,105 +1,11 @@
+let productos = [];
 
-const productos = [
-    {
-        id: "creatina-01",
-        titulo: "Creatina CreaStack",
-        imagen: "img/crea1.webp",
-        categoria: {
-                nombre: "Creatinas",
-                id: "creatinas"
-        },
-        precio: 20000
-    },
-
-    {
-        id: "creatina-02",
-        titulo: "Creatine Monohidrate 3000",
-        imagen: "img/crea2.webp",
-        categoria: {
-                nombre: "Creatinas",
-                id: "creatinas"
-        },
-        precio: 18000
-    },
-
-    {
-        id: "creatina-03",
-        titulo: "Creatine Iron Nutrition",
-        imagen: "img/crea3.webp",
-        categoria: {
-                nombre: "Creatinas",
-                id: "creatinas"
-        },
-        precio: 15000
-    },
-
-    {
-        id: "proteina-01",
-        titulo: "Proteina NitroTech",
-        imagen: "img/prote1.webp",
-        categoria: {
-                nombre: "Proteinas",
-                id: "proteinas"
-        },
-        precio: 35000
-    },
-
-    {
-        id: "proteina-02",
-        titulo: "Proteina Bipro",
-        imagen: "img/prote2.png",
-        categoria: {
-                nombre: "Proteinas",
-                id: "proteinas"
-        },
-        precio: 27000
-    },
-
-    {
-        id: "proteina-03",
-        titulo: "Proteina Iso100",
-        imagen: "img/prote3.jpeg",
-        categoria: {
-                nombre: "Proteinas",
-                id: "proteinas"
-        },
-        precio: 33000
-    },
-
-    {
-        id: "planes-01",
-        titulo: "Plan Gym",
-        imagen: "img/plan1.avif",
-        categoria: {
-                nombre: "Planes",
-                id: "planes"
-        },
-        precio: 8000
-    },
-
-    {
-        id: "planes-02",
-        titulo: "Plan Alimentacion",
-        imagen: "img/plan2.jpg",
-        categoria: {
-                nombre: "Planes",
-                id: "planes"
-        },
-        precio: 8000
-    },
-
-    {
-        id: "planes-03",
-        titulo: "Plan Gym + Alimentacion",
-        imagen: "img/plan3.webp",
-        categoria: {
-                nombre: "Planes",
-                id: "planes"
-        },
-        precio: 12000
-    },
-
-];
+fetch ("./productos.json")
+    .then (response => response.json ())
+    .then (data =>{
+        productos = data;
+        cargarProductos(productos)
+    })
 
 
 const contenedorProductos = document.querySelector("#contenedor-productos");
@@ -132,7 +38,7 @@ function cargarProductos (productosElegidos) {
 }
 
 
-cargarProductos(productos);
+
 
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
@@ -177,6 +83,23 @@ if (productosEnCarritoLS){
 
 
 function agregarAlCarrito (e){
+
+    Toastify({
+        text: "SE AGREGO AL CARRITO",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, #785ce9, #96c93d)",
+        borderRadius: "2rem",
+        textTransform: "uppercase",
+        fontSize: ".85rem"
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
 

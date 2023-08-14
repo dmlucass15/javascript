@@ -77,6 +77,23 @@ function actualizarBotonesEliminar (){
 }
 
 function eliminarDelCarrito (e){
+
+    Toastify({
+        text: "SE ELIMINO DEL CARRITO",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+        background: "linear-gradient(to right, #785ce9, #96c93d)",
+        borderRadius: "2rem",
+        textTransform: "uppercase",
+        fontSize: ".85rem"
+        },
+        onClick: function(){} // Callback after click
+    }).showToast();
+
     let idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
 
@@ -90,9 +107,22 @@ function eliminarDelCarrito (e){
 botonVaciar.addEventListener("click", vaciarCarrito);
 function vaciarCarrito (){
 
-    productosEnCarrito.length = 0;
-    localStorage.setItem ("productos-en-carrito", JSON.stringify(productosEnCarrito));
-    cargarProductosCarrito();
+    Swal.fire({
+        title: '¿Estas Seguro?',
+        icon: 'question',
+        html:'Se eliminaran todos tus productos. ' ,
+        showCancelButton: true,
+        focusConfirm: false,
+        confirmButtonText:'SI',
+        cancelButtonText:'NO',
+    }).then((result) => {
+            if (result.isConfirmed) {
+                productosEnCarrito.length = 0;
+                localStorage.setItem ("productos-en-carrito", JSON.stringify(productosEnCarrito));
+                cargarProductosCarrito();
+            
+            }
+    })
 
 }
 
@@ -103,6 +133,14 @@ function actualizarTotal (){
 
 botonComprar.addEventListener("click", comprarCarrito);
 function comprarCarrito (){
+
+    Swal.fire({
+        position: 'top',
+        icon: 'success',
+        title: 'Compra Finalizada',
+        showConfirmButton: false,
+        timer: 1500
+      })
 
     productosEnCarrito.length = 0;
     localStorage.setItem ("productos-en-carrito", JSON.stringify(productosEnCarrito));
